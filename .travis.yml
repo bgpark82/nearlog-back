@@ -34,8 +34,8 @@ deploy:
     bucket: "bgpark-update-test"
     key: nearlog.zip
     bundle_type: zip
-    application: bgpark-deploy-app
-    deployment_group: bgpark-deploy-app-group
+    application: bgpark-codedeploy-app
+    deployment_group: bgpark-codedeploy-group
     region: ap-northeast-2
     wait-until-deployed: true
 
