@@ -15,7 +15,7 @@ script: "./gradlew clean build"
 
 before_deploy:
   - zip -r nearlog *
-  - mkdir deploy
+  - mkdir -p deploy
   - mv nearlog.zip deploy/nearlog.zip
 
 deploy:
