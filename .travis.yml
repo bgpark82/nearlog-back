@@ -19,14 +19,25 @@ before_deploy:
   - mv nearlog.zip deploy/nearlog.zip
 
 deploy:
-  provider: s3
-  access_key_id: "AKIARH7J7IJU3QSD2FDP"
-  secret_access_key: "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"
-  bucket: "bgpark-update-test"
-  skip_cleanup: true
-  local_dir: deploy
-  wait-until-deployed: true
-  region: ap-northeast-2
+  - provider: s3
+    access_key_id: "AKIARH7J7IJU3QSD2FDP"
+    secret_access_key: "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"
+    bucket: "bgpark-update-test"
+    skip_cleanup: true
+    local_dir: deploy
+    wait-until-deployed: true
+    region: ap-northeast-2
+
+  - provider: codedeploy
+    access_key_id: "AKIARH7J7IJU3QSD2FDP"
+    secret_access_key: "AKIARH7J7IJU3QSD2FDP"
+    bucket: "bgpark-update-test"
+    key: nearlog.zip
+    bundle_type: zip
+    application: bgpark-deploy-app
+    deployment_group: bgpark-deploy-app-group
+    region: ap-northeast-2
+    wait-until-deployed: true
 
 notifications:
   email:
