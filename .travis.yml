@@ -30,7 +30,7 @@ deploy:
 
   - provider: codedeploy
     access_key_id: "AKIARH7J7IJU3QSD2FDP"
-    secret_access_key: "AKIARH7J7IJU3QSD2FDP"
+    secret_access_key: "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"
     bucket: "bgpark-update-test"
     key: nearlog.zip
     bundle_type: zip
