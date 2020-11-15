@@ -24,6 +24,8 @@ deploy:
   secret_access_key: "w3RpEiv4QenCNZTEfFxIZxjiSNvi+Nc8Z0MXo7kA"
   bucket: "bgpark-update-test"
   skip_cleanup: true
+  local_dir: deploy
+  wait-until-deployed: true
   region: ap-northeast-2
 
 notifications:
