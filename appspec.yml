@@ -3,3 +3,9 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app/build
+    override: yes
+hooks:
+  - BeforeInstall:
+      - location: deploy-trigger.sh
+        timeout: 300
+        runas: ec2-user
